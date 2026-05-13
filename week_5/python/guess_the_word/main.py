@@ -1,4 +1,4 @@
-from constance import GAME_WORDS, ATTEMPTS
+from week_5.python.guess_the_word.constance import GAME_WORDS, ATTEMPTS
 import random
 
 

@@ -1,4 +1,4 @@
-from tasks import TASKS
+from week_5.python.task_meneger.tasks import TASKS
 
 
 def show_menu():
