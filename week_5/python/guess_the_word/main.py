@@ -1,43 +1,49 @@
 from constance import GAME_WORDS
 import random
 
-ATTEMPTS = 10
 
-def show(size: int) -> None:
-    print ("welcome to the game")
-    print("you need to enter a letter fot this size of a word")
-    print(f'"{" _ " * size}"')
-    print(f"you have {ATTEMPTS}")
+ATTEMPTS = 30
 
-def get_random_word():
+
+def show(size: int) -> str:
+    return f"""
+    welcome to the game\n
+    you need to enter a letter fot this size of a word\n
+    "{" _ " * size}"\n
+    you have {ATTEMPTS}
+    """
+
+def get_random_word() -> tuple:
     word = random.choice(GAME_WORDS)
     return [l for l in word], ['_' for l in word]
 
-def main():
-    attempts = 10
+
+def main() -> None:
+    attempts = 30
     count = 0
     word, refernce_word = get_random_word()
-    show(len(word))
+    print(show(len(word)))
     while attempts > 0:
         count += 1
-        user_guess = input("enter your guess: ")
+        user_guess = input(f"\t[{count}]. enter your guess: \n")
         if not(guess_match(word, refernce_word, user_guess)):
             attempts -= 1
-        print("".join(refernce_word))
+        print("\n\t" , " ".join(refernce_word), '\n')
         if "_" not in refernce_word:
-            print(f"you won!! in {count} attempts")
+            print(f"\nyou won!! in {count} attempts")
             break
     else:
-        print("you lose :(")
+        print("\nyou lose :(")
 
 
-def guess_match(secret_word: list, hidden_word: list, letter: str):
+def guess_match(secret_word: list, hidden_word: list, letter: str) -> bool:
     user_right = False
     for i, l in enumerate(secret_word):
         if letter == l:
             hidden_word[i] = l
             user_right = True
     return user_right
+
 
 if __name__ == "__main__":
     main()
