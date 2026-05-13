@@ -1,4 +1,4 @@
-from week_5.python.task_meneger.utils import (
+from utils import (
     show_menu, show_tesks,
     undone_tasks, done_tasks,
     high_prio, daily_summary)

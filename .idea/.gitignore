@@ -8,3 +8,13 @@
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+.idea/
+*.iml
+
+__pycache__/
+*.py[cod]
+*$py.class
+.idea
+.DS_Store
+__pycache__
+..
