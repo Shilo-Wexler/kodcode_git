@@ -1,0 +1,3 @@
+
+GAME_WORDS = ['','']
+ATTEMPTS = 10
