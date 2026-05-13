@@ -1,3 +1,2 @@
 
-GAME_WORDS = ['','']
-ATTEMPTS = 10
+GAME_WORDS = ['hello','world']
