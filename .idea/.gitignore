@@ -18,3 +18,11 @@ __pycache__/
 .DS_Store
 __pycache__
 ..
+.idea/
+*.iml
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.DS_Store
